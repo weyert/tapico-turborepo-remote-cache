@@ -544,11 +544,11 @@ func main() {
 		fmt.Printf("Started tapico-turborepo-remote-cache server at %s", address)
 	} else {
 		// Default port 8080
-		err := http.ListenAndServe("localhost:8080", loggedRouter)
+		err := http.ListenAndServe("0.0.0.0:8080", loggedRouter)
 		if err != nil {
 			panic(err)
 		}
-		fmt.Printf("Started tapico-turborepo-remote-cache server at %s", "localhost:8080")
+		fmt.Printf("Started tapico-turborepo-remote-cache server at %s", "0.0.0.0:8080")
 	}
 }
 
